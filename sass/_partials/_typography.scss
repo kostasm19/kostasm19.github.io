@@ -1,0 +1,15 @@
+/*_typography.scss*/
+body {
+	color: $text-color;
+	font-size: $base-font-size;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
+	line-height: 1.6;
+}
+
+strong { font-weight: 700; }
+.main-content {
+	h1.title, .field-name-field-display-title .field-item {
+		font-size: 25px; border-bottom: 1px solid #777; margin-bottom: 10px;
+	}
+}

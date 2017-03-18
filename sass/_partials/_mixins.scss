@@ -1,0 +1,125 @@
+/* mixins.scss */
+
+
+@mixin filter-blur($radius) {
+	-webkit-filter	: blur($radius);
+	-moz-filter		: blur($radius);
+	-o-filter		: blur($radius);
+	-ms-filter		: blur($radius);
+	filter			: blur($radius);
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($hs, $vs, $blur, $spread, $color, $inset:"") {
+	-webkit-box-shadow: $hs, $vs, $blur, $spread, $color, #{$inset};
+    -moz-box-shadow: $hs $vs $blur $spread $color #{$inset};
+    box-shadow: $hs $vs $blur $spread $color #{$inset};
+}
+
+@mixin appearance($value) {
+	-webkit-appearance: $value;
+	-moz-appearance:    $value;
+	appearance:         $value;
+}
+
+@mixin placeholder($color) {
+	::-webkit-input-placeholder {
+	   color: $color;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	   color: $color;
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: $color;
+	}
+	:-ms-input-placeholder {
+	   color: $color;
+	}
+}
+
+@mixin transitions($property, $duration, $timing, $delay) {
+	-webkit-transition	: $property $duration $timing $delay;
+    -moz-transition		: $property $duration $timing $delay;
+    -o-transition		: $property $duration $timing $delay;
+    transition			: $property $duration $timing $delay;
+}
+
+@mixin selection_text($bg_color, $color) {
+	::selection {
+	  background: $bg_color; //#9c2a0b; /* WebKit/Blink Browsers */
+	  color: $color;
+	}
+	::-moz-selection {
+	  background: $bg_color; //#9c2a0b; /* Gecko Browsers */
+	  color: $color;
+	}
+}
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+/* Media Queries */
+@mixin extraSmallScreen {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+@mixin smallScreen {
+	@media screen and (min-width: 768px) and (max-width: 991px) {
+		@content;
+	}
+}
+@mixin bothSmallAndExtraSmall {
+	@media screen and (max-width: 991px) {
+		@content;
+	}
+}
+@mixin mediumScreen {
+	@media screen and (min-width: 992px) and (max-width: 1199px) {
+		@content;
+	}
+}
+@mixin largeScreen {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+@mixin aboveSmall {
+	@media screen and (min-width: 992px) {
+		@content;
+	}
+}

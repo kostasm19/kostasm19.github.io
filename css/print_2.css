@@ -1,0 +1,73 @@
+
+/* ---------- General Layout ---------- */
+
+body,
+input,
+textarea,
+select {
+  color: #000;
+  background: none;
+}
+body.two-sidebars,
+body.sidebar-first,
+body.sidebar-second,
+body {
+  width: 640px;
+}
+#sidebar-first,
+#sidebar-second,
+.navigation,
+#toolbar,
+#footer-wrapper,
+.tabs,
+.add-or-remove-shortcuts {
+  display: none;
+}
+.one-sidebar #content,
+.two-sidebars #content {
+  width: 100%;
+}
+#triptych-wrapper {
+  width: 960px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#triptych-first, #triptych-middle, #triptych-last {
+  width: 250px;
+}
+
+/* ---------- Node Pages ---------- */
+
+#comments .title,
+#comments form,
+.comment_forbidden {
+  display: none;
+}
+
+#header-wrapper, #footer-top-wrapper, #footer-wrapper,
+.views-field-line-item-title,
+ul.action-links, .print-page {
+	display: none;
+}
+
+#block-views-store-info-block-block-1 {
+	display: block;
+	text-align: right;
+	font-size: 0.7em;
+}
+.views-field-line-item-title-1 {
+	display: initial;
+}
+.field-name-commerce-order-total .commerce-price-formatted-components {
+    width: 50%;
+    margin-left: auto;
+}
+
+.container {
+	margin: 20px;
+}
+
+#mobileHeader-wrapper {
+	display: none;
+}

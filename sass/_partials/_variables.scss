@@ -1,0 +1,34 @@
+/*_variables.scss */
+/* Body Text Styles */
+$text-color: #191919 !important;
+$base-font-size: 14px !important;
+$base-font-family: 'Roboto', sans-serif !important;
+$base-font-weight: 400 !important;
+
+$span-info-display: none;
+
+// Colors
+$myRed		: #bf0606;
+$myGreen	: #088A43;
+$myOrange	: #EC6A0A;
+$myBlue		: #0A97EC;
+$myBlack	: #151515;
+$myWhite	: #ffffff;
+$myBrown	: #563800;
+
+$primary-color		: #40C867; //#749d01;//#1562AE;//#29B1BF;
+$primary-dark		: darken($primary-color, 10%);
+$primary-light		: lighten($primary-color, 10%);
+$primary-very-light	: lighten($primary-color, 30%);
+$dark-grey			: #212121;
+$medium-grey		: #636363;
+$light-grey			: #A5A5A5;
+$very-light-grey	: #CCCCCC;
+
+//Messages Colors
+$statusColor	: #C7E8FF;
+$warningColor	: #ffe4c9;
+$errorColor		: #ffc7c7;
+
+// Widths
+$mobileMenuNavbar : 300px;

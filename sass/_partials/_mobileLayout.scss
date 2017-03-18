@@ -1,0 +1,41 @@
+/*_mobileLayout.scss */
+
+
+@media screen and (max-width: 991px) {
+	.single-product-display-panel .panel-col-first {
+		width: 100%;
+	}
+	.single-product-display-panel .panel-col-last {
+		width: 100%;
+	}
+
+	.mask {
+		display: none;
+		@include transitions(all, 200ms, linear, 0s);
+		background: $dark-grey none repeat scroll 0 0;
+		cursor: pointer;
+		opacity: 0.45;
+		position: fixed;
+		//left: $mobileMenuNavbar;
+		height: 100%;
+		width: 100%;
+		top: 0px;
+		overflow: hidden;
+		z-index: 400;
+		display: none;
+	}
+	.fixIt {
+		position: fixed !important;
+		top: 60px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+@media screen and (min-width: 1200px) {
+
+}
